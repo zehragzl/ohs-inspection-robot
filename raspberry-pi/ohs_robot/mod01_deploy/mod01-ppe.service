@@ -1,0 +1,45 @@
+# mod01-ppe.service — MOD-01 PPE Detection systemd Unit (Pi 5 şablonu)
+#
+# Kurulum:
+#   sudo cp mod01-ppe.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now mod01-ppe
+#
+# Log izleme:
+#   journalctl -u mod01-ppe -f
+#
+# Durdurma:
+#   sudo systemctl stop mod01-ppe
+
+[Unit]
+Description=MOD-01 Vision-Based PPE Detection Service
+Documentation=https://github.com/your-org/ohs-robot
+After=network-online.target mosquitto.service
+Wants=mosquitto.service
+# MOD-03 ile aynı process kullanılıyorsa bu unit devre dışı bırakılır;
+# ayrı process senaryosu için aktif tutulur.
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/ceng
+
+# Ortam değişkenleri (ihtiyaca göre düzenle)
+Environment="PPE_MODEL_PATH=/home/pi/ceng/best.onnx"
+Environment="PPE_MQTT_BROKER=localhost"
+Environment="PPE_MQTT_PORT=1883"
+Environment="PPE_LOG_LEVEL=INFO"
+Environment="PPE_ONNX_THREADS=2"
+
+ExecStart=/home/pi/ceng/venv/bin/python service.py --interval 0
+
+# Sadece servis crash'lerse yeniden başlat (SIGTERM ile normal çıkışta başlatma)
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=mod01-ppe
+
+[Install]
+WantedBy=multi-user.target

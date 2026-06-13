@@ -1,0 +1,30 @@
+# MOD-01 PPE Detection — Pi/ARM uyumlu bağımlılıklar
+# Python 3.11 (Raspberry Pi OS Bookworm) için gevşek pinli
+#
+# Kurulum (Pi üzerinde):
+#   python3 -m venv venv
+#   source venv/bin/activate
+#   pip install --upgrade pip
+#   pip install -r requirements.txt
+#
+# NOT: picamera2 pip'te değil, apt ile kurulur:
+#   sudo apt install python3-picamera2
+#
+# NOT: ultralytics model export için geliştirici makinesinde kurulur;
+#      Pi runtime'da gerekmez (bu dosyada yer almaz).
+
+# ONNX Runtime — ARM64 (aarch64) wheel PyPI'de mevcut
+# Pi 5 için 1.18+ önerilir; 1.20 Pi OS Bookworm libstdc++ gereksinimi var
+onnxruntime>=1.17.0,<1.20.0
+
+# OpenCV — headless (Pi'de GUI yok, x11 bağımlılığı olmadan daha hafif)
+opencv-python-headless>=4.7.0,<5.0.0
+
+# MQTT
+paho-mqtt>=2.0.0,<3.0.0
+
+# NumPy — 1.x ARM uyumu için güvenli; numpy 2.x Pi 3.11'de wheel sorunu çıkabilir
+numpy>=1.24.0,<2.0.0
+
+# Flask — MJPEG kamera stream sunucusu için
+flask>=3.0.0,<4.0.0

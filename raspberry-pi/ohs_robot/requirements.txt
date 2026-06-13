@@ -1,0 +1,8 @@
+paho-mqtt>=2.0.0,<3.0.0
+pyserial>=3.5
+numpy>=1.24.0,<2.0.0
+
+# Pi'de ayrıca:
+#   sudo apt install python3-picamera2 python3-rpi.gpio
+#   pip install adafruit-circuitpython-dht   (DHT22 için — Raspberry Pi OS Bookworm/Bullseye)
+#   pip install RPi.GPIO                     (MQ135 / KY038 DO pini için)
