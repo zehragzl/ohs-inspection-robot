@@ -1,0 +1,31 @@
+<svg viewBox="0 0 2400 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="2400" height="400" fill="#f8fafc" />
+
+  <rect x="25" y="85" width="2350" height="230" fill="#f1f5f9" stroke="#64748b" stroke-width="4" />
+  
+  <line x1="25" y1="200" x2="2375" y2="200" stroke="#94a3b8" stroke-width="4" stroke-dasharray="15,15" />
+
+  <circle cx="50" cy="200" r="10" fill="#ef4444" stroke="#ffffff" stroke-width="3" />
+  <text x="50" y="160" font-family="Arial" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Z23</text>
+  <text x="50" y="250" font-family="Arial" font-size="16" font-weight="bold" fill="#64748b" text-anchor="middle">0.00m</text>
+
+  <circle cx="533" cy="200" r="10" fill="#ef4444" stroke="#ffffff" stroke-width="3" />
+  <text x="533" y="160" font-family="Arial" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Kolon</text>
+  <text x="533" y="250" font-family="Arial" font-size="16" font-weight="bold" fill="#64748b" text-anchor="middle">4.83m</text>
+
+  <circle cx="1039" cy="200" r="10" fill="#ef4444" stroke="#ffffff" stroke-width="3" />
+  <text x="1039" y="160" font-family="Arial" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Otonom Lab</text>
+  <text x="1039" y="250" font-family="Arial" font-size="16" font-weight="bold" fill="#64748b" text-anchor="middle">9.89m</text>
+
+  <circle cx="1361" cy="200" r="10" fill="#ef4444" stroke="#ffffff" stroke-width="3" />
+  <text x="1361" y="160" font-family="Arial" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Sebil Önü</text>
+  <text x="1361" y="250" font-family="Arial" font-size="16" font-weight="bold" fill="#64748b" text-anchor="middle">13.11m</text>
+
+  <circle cx="1913" cy="200" r="10" fill="#ef4444" stroke="#ffffff" stroke-width="3" />
+  <text x="1913" y="160" font-family="Arial" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Priz</text>
+  <text x="1913" y="250" font-family="Arial" font-size="16" font-weight="bold" fill="#64748b" text-anchor="middle">18.63m</text>
+
+  <circle cx="2327" cy="200" r="10" fill="#ef4444" stroke="#ffffff" stroke-width="3" />
+  <text x="2327" y="160" font-family="Arial" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Mikroişlemciler</text>
+  <text x="2327" y="250" font-family="Arial" font-size="16" font-weight="bold" fill="#64748b" text-anchor="middle">22.77m</text>
+</svg>
